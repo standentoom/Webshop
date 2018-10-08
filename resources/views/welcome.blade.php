@@ -9,8 +9,22 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <!-- Styles -->
+        <script>
+$(document).ready(function(){
+    $(".btn-hamburger").click(function(){
+        $(".menu-hamburger").toggle();
+    });
+});
+        /*
+            $(".btn-hamburger").click(function(){
+                $(".menu-hamburger").toggle();
+            });*/
+        </script>
         <style>
             html, body {
                 background-color: #fff;
@@ -97,12 +111,35 @@
                 padding-left: 9px;
                 padding-right: 9px;
             }
+
+            .menu-hamburger{
+                display: none;
+                width: 2px;
+                margin-left:20px;
+                margin-top: 10px;
+                background-color: #e4e6e7;
+            }
+
+            .menu-hamburger > a {
+                margin-left: 5px;
+                margin-top: 50px;
+                text-decoration: none;
+            }
         </style>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
             <div class="top-left logo">
-               <button class="btn-hamburger">&#9776</button>
+                <button class="btn-hamburger">&#9776</button>
+                <div class="menu-hamburger">
+                    <li>
+                        <a>MTX</a>
+                        <a>Derbi</a>
+                        <a>Zundab</a>
+                        <a>Tomos</a>
+                        <a>Vespa</a>
+                    </li>
+               </div>
                 <a href="">KCB</a>
             </div>
             @if (Route::has('login'))
