@@ -1,6 +1,12 @@
-@extends('layouts.app')
+<!doctype html>
+<html lang="{{ app()->getLocale() }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Webshop</title>
+
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -119,7 +125,7 @@ $(document).ready(function(){
                 margin-top: 50px;
                 text-decoration: none;
             }
-          
+
         </style>
     </head>
     <body>
@@ -128,13 +134,12 @@ $(document).ready(function(){
                 <button class="btn-hamburger">&#9776</button>
                 <a class="logo" href="">KCB</a>
                 <div class="menu-hamburger">
-                    @foreach ($categories as $category)
-
-                        <a href="">{{ $category }}</a>
-
-                    @endforeach
+                    <a href="">Honda</a>
+                    <a href="">Derbi</a>
+                    <a href="">Zundab</a>
+                    <a href="">Tomos</a>
+                    <a href="">Vespa</a>
                 </div>
-
             </div>
             @if (Route::has('login'))
                 <div class="top-right links">
@@ -163,17 +168,11 @@ $(document).ready(function(){
                 </div>
             @endif
             <div class="top-mid">
-                <p class="text-header">Welcome to bv Brommers.</p>
+                <p class="text-header">THOMOS.</p>
             </div>
+
             <div class="content">
-                @foreach ($products as $product)
-
-                    <button>{{ $product }}</button>
-
-                @endforeach
-            </div>
-            <div class="container">
-                <p>On this page you wil see a banner and a drop down menu</p>
+                <p>On this page youj wil see a banner and a drop down menu</p>
             </div>
         </div>
     </body>
